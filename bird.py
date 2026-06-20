@@ -9,12 +9,12 @@ class Bird(GameObject):
         self.image = self.frames[self.index]
         super().__init__(self.image, 100, 512)
 
-        self.gravity = 0.25
+        self.gravity = 0.35
         self.movement = 0
 
     def flap(self):
         self.movement = 0
-        self.movement -= 12
+        self.movement -= 8
 
     def update(self):
         self.movement += self.gravity
